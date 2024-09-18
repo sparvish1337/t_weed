@@ -21,7 +21,6 @@ function spawnWeedPlants(weedZone)
     while spawnedPlants < maxPlants do
         local randomPos = getRandomPointInSphere(weedZone.coords, weedZone.radius)
 
-        -- Find ground position
         local found, groundZ = GetGroundZFor_3dCoord(randomPos.x, randomPos.y, randomPos.z + 100.0, true)
         if found then
             randomPos = vector3(randomPos.x, randomPos.y, groundZ)
